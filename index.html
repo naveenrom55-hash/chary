@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chary Mosquito Nets</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    
+<!-- ===========================
+ TOP BLACK STRIP
+=========================== -->
+<div class="top-strip">
+    <div class="top-left">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <div class="strip-text">
+        Bulk Residential Units, Gated communities and high-rise contracts are Accepted!
+    </div>
+
+    <div class="brochure-btn">
+        <i class="fas fa-bell"></i> Brochure
+    </div>
+</div>
+
+<!-- ===========================
+ HEADER
+=========================== -->
+<header class="header">
+
+    <!-- LOGO -->
+    <img src="Assets/logo.png" class="logo" alt="Chary Logo">
+
+    <!-- DESKTOP NAV -->
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact Us</a>
+    </nav>
+
+    <!-- CONTACT -->
+    <div class="contact-box">
+        <i class="fas fa-phone-volume"></i>
+        <div>
+            <p class="quick">Quick Contact</p>
+            <p class="number">9397098090</p>
+        </div>
+    </div>
+
+    <!-- HAMBURGER (MOBILE) -->
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+</header>
+
+<!-- MOBILE OVERLAY -->
+<div class="menu-overlay" id="menu-overlay"></div>
+
+<!-- MOBILE SLIDE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+    <div class="close-btn" id="close-btn">
+        <i class="fas fa-times"></i>
+    </div>
+
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Contact Us</a>
+</div>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobile-menu");
+const closeBtn = document.getElementById("close-btn");
+const overlay = document.getElementById("menu-overlay");
+
+hamburger.onclick = () => {
+    mobileMenu.classList.add("open");
+    overlay.classList.add("show");
+};
+
+closeBtn.onclick = overlay.onclick = () => {
+    mobileMenu.classList.remove("open");
+    overlay.classList.remove("show");
+};
+</script>
+
+
+
+
+<!-- ===========================
+ HERO SECTION
+=========================== -->
+<section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>CHARY</h1>
+        <h2>MOSQUITO NETS AND ALUMINIUM MESH DOORS</h2>
+
+        <p class="subtext">Windows | Doors | Ventillators | Balcony</p>
+        <p class="repair">Repairs and Servicing Available</p>
+
+        <a class="cta-btn" href="#">
+            Request a site visit →
+        </a>
+    </div>
+</section>
+
+
+<!-- ===========================
+ QUOTE FORM
+=========================== -->
+<section class="quote-section">
+    <div class="quote-box">
+
+        <h3>Request a Quote</h3>
+
+        <div class="form-row">
+            <input type="text" placeholder="Name*" />
+            <input type="text" placeholder="Phone*" />
+            <input type="text" placeholder="Location*" />
+
+           <select class="service-select">
+    <option selected>Select Service</option>
+    <option>Mosquito Net for Doors</option>
+    <option>Mosquito Net for Windows</option>
+    <option>Mosquito Net for Balcony</option>
+    <option>Repair</option>
+    <option>Mesh Change</option>
+</select>
+
+
+            <button class="submit-btn">Submit Now →</button>
+        </div>
+    </div>
+</section>
+
+<!-- ===========================
+ ABOUT SECTION
+=========================== -->
+<section class="about-section">
+
+    <div class="about-content">
+
+        <p class="tagline">Chary Mosquito Nets - Hyderabad's No. 1 Brand.</p>
+
+        <h2 class="about-title">
+            Mosquito Net for <br>
+            Doors and Window <br>
+            Best In Quality
+        </h2>
+
+        <p class="about-text">
+            Chary Nets has collaboration with best markets to provide quality 
+            <b>Insect Screen</b> Systems to Indian Consumers. The company has it's own manufacturing, 
+            assembling & distribution unit located in Financial Dist. Hyderabad. 
+            Our manufacturing team has been well trained to assemble perfect 
+            <b>Mosquito Net Screens</b> at Hyderabad. Chary Mosquito Nets uses quality machines 
+            to ensure perfect quality standards of production. Moreover, the company has adopted 
+            stringent systems as suggested by Quality Audit Teams. Chary Mosquito Nets undoubtedly 
+            is the best manufacturer in Hyderabad for Pleated Mosquito Net, 
+            <b>Aluminium Mesh Doors</b> & <b>Roller Mosquito Net Screen.</b>
+        </p>
+
+        <ul class="about-list">
+            <li>Experienced Solution Providers Team</li>
+            <li>Trained Installation Team with proper Tools</li>
+            <li>Established in 2004, distribution over all of Hyderabad</li>
+            <li>Pneumatic Needle for holes in Plisse Net (Only with Chary Net)</li>
+            <li>Components made in ABS Polymer for strength.</li>
+        </ul>
+
+    </div>
+
+    <div class="about-image">
+        <img src="Assets/logo.png" alt="">
+    </div>
+
+</section>
+
+<!-- ===========================
+ SERVICES SECTION (UPDATED SLIDER)
+=========================== -->
+<section class="services-section">
+
+    <div class="services-header">
+        <div class="left-title">
+            <h2>We Provide Best Quality<br>
+                Mosquito Net SCReens in<br>
+                Hyderabad
+            </h2>
+        </div>
+
+        <div class="right-text">
+            Chary Mosquito Nets is the only brand to have a professional team of
+            installers & technicians to support after sale service. Please 
+            <span class="highlight">Call Us</span> OR 
+            <span class="highlight">Mail Us</span> to get your queries resolved.
+        </div>
+    </div>
+
+    <!-- SLIDER CONTAINER -->
+    <div class="service-slider">
+
+        <!-- SLIDE 1 (3 CARDS) -->
+        <div class="slide active">
+            <div class="service-card">
+                <h3>Mosquito Nets for<br>Ventillators</h3>
+                <img src="Assets/v1.png" alt="">
+                <p>We leave no gaps for mosquitoes…</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Mosquito Nets For<br>Windows</h3>
+                <img src="Assets/v2.png" alt="">
+                <p>We offer a wide range…</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Mosquito Nets for Doors<br>[Aluminium]</h3>
+                <img src="Assets/v3.png" alt="">
+                <p>We offer various models…</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 2 (ONLY BALCONY CARD) -->
+        <div class="slide">
+            <div class="service-card center-card">
+                <h3>Mosquito Nets for<br>Balcony</h3>
+                <img src="Assets/v4.png" alt="">
+                <p>We offer perfect custom solutions…</p>
+            </div>
+        </div>
+
+        <!-- DOTS -->
+        <div class="dots">
+            <span class="dot active" onclick="showSlide(0)"></span>
+            <span class="dot" onclick="showSlide(1)"></span>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+let currentSlide = 0;
+let slides = document.querySelectorAll(".slide");
+let dots = document.querySelectorAll(".dot");
+
+function showSlide(n) {
+    slides[currentSlide].classList.remove("active");
+    dots[currentSlide].classList.remove("active");
+
+    currentSlide = n;
+
+    slides[currentSlide].classList.add("active");
+    dots[currentSlide].classList.add("active");
+}
+</script>
+
+<!-- ===========================
+ CTA BANNER SECTION
+=========================== -->
+<section class="cta-banner">
+    <div class="cta-overlay"></div>
+
+    <div class="cta-content">
+        <h2>Get ready for a Mosquito Free House.</h2>
+        <a href="#" class="cta-btn-yellow">Get In Touch →</a>
+    </div>
+</section>
+
+
+<!-- ===========================
+ WHY CHOOSE US
+=========================== -->
+<section class="why-section">
+
+    <div class="why-left">
+        <p class="why-tag">Why Choose Us</p>
+
+        <h2 class="why-title">
+            We Will Set Best Shield’s to <br>
+            protect your family from the <br>
+            Mosquitos.
+        </h2>
+
+        <p class="why-desc">
+            It is very true to claim that – Chary Net is the BENCHMARK in Hyderabad
+            regarding quality norms for retractable mosquito net industry.
+        </p>
+
+        <div class="why-item">
+            <span class="why-icon">✔</span>
+            <div>
+                <h3>Best Services</h3>
+                <p>Our services are the best in the present market and will be, forever.</p>
+            </div>
+        </div>
+
+        <div class="why-item">
+            <span class="why-icon">✔</span>
+            <div>
+                <h3>We Are Committed</h3>
+                <p>Our commitment towards your satisfaction drives Chary Mosquito Nets.</p>
+            </div>
+        </div>
+
+        <div class="why-item">
+            <span class="why-icon">✔</span>
+            <div>
+                <h3>Customer Focused</h3>
+                <p>We improve our services with your feedbacks.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="why-right">
+        <img src="Assets/best_quality.png" class="why-badge" id="tilt-img">
+    </div>
+
+</section>
+
+<script>
+const img = document.getElementById("tilt-img");
+
+img.addEventListener("mousemove", (e) => {
+    const rect = img.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    const rotateX = -(y / 20);
+    const rotateY = x / 20;
+
+    img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+});
+
+img.addEventListener("mouseleave", () => {
+    img.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
+});
+</script>
+
+
+<section class="process-section">
+
+    <div class="process-header">
+        <h2>Our Working Process</h2>
+        <p>3 Easy Steps</p>
+    </div>
+
+    <!-- CURVED DASHED LINE -->
+    <div class="process-line"></div>
+
+    <div class="process-steps">
+
+        <div class="process-item">
+            <div class="process-card">
+                <img src="Assets/c1.png" alt="">
+            </div>
+            <h3>Schedule a Call</h3>
+            <p>
+                CHARY MOSQUITO NETS services over all areas in Hyderabad.
+                Call Us or Mail Us for appointments.
+            </p>
+        </div>
+
+        <div class="process-item">
+            <div class="process-card">
+                <img src="Assets/calculator.svg" alt="">
+            </div>
+            <h3>Get Estimation</h3>
+            <p>
+                Free Site Inspection, Measurement & Estimation.
+                Retractable Mosquito Net for Windows & Doors.
+            </p>
+        </div>
+
+        <div class="process-item">
+            <div class="process-card">
+                <img src="Assets/s1.jpg" alt="">
+            </div>
+            <h3>Install Insect Screen</h3>
+            <p>
+                We provide best sales & service by trained teams
+                for your requirements.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+document.querySelectorAll('.process-card').forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        card.style.transform = "rotate(0deg)";
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "rotate(-12deg)";
+    });
+});
+</script>
+
+
+<!-- ===========================
+ LET'S GET TOGETHER CTA
+=========================== -->
+<section class="together-section">
+  <div class="together-bg"></div>
+
+  <div class="together-shape">
+    <h2>Let’s Get<br>Together</h2>
+    <p>Take Our Services</p>
+
+    <a href="#" class="together-btn">
+      Ping us on Whatsapp →
+    </a>
+  </div>
+</section>
+
+
+
+
+<!-- ===========================
+ CONTACT + MAP SECTION
+=========================== -->
+<section class="contact-section">
+
+    <div class="contact-actions">
+
+    <a href="#" class="whatsapp-btn">
+        <img src="Assets/whatsapp.png" alt="">
+        Chat on WhatsApp
+    </a>
+
+    <div class="phone-box">
+        <img src="Assets/phone.png" class="phone-icon">
+        <p class="phone-number">9397098090</p>
+    </div>
+
+</div>
+
+
+    <!-- Right Side Google Map -->
+    <div class="contact-map">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.31032579807!2d78.38595587492807!3d17.44199758346005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91e32fd51eb3%3A0x3e2929d6a2dff7e5!2sFinancial%20District%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1700000000000"
+            width="350"
+            height="420"
+            style="border:0; border-radius:10px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+</section>
+
+<!-- ===========================
+ FOOTER SECTION
+=========================== -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- ABOUT COLUMN -->
+        <div class="footer-col">
+            <p class="footer-text">
+                Hyderabad’s No. 1 Brand for last 15 Years. Pleated Mosquito Net,
+                <b>Aluminium Mesh Doors</b>, Folding Doors, <b>Single Doors</b>,
+                <b>Double Doors</b>, Mesh for Ventillators, sleeks are main products.
+            </p>
+
+            <div class="footer-socials">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+
+        <!-- PRODUCTS COLUMN -->
+        <div class="footer-col">
+            <h3 class="footer-title">Products</h3>
+
+            <ul class="footer-links">
+                <li>› Hello, Need Mosquito Net for Window</li>
+                <li>› Hello, Need Mosquito Net for Doors</li>
+                <li>› Hello, Need Mosquito Net for Balcony</li>
+                <li>› Mosquito Slide for UPVC Windows and Balcony Door</li>
+                <li>› Mesh Change</li>
+                <li>› Repairs and Services</li>
+            </ul>
+        </div>
+
+        <!-- OFFICE COLUMN -->
+        <div class="footer-col">
+            <h3 class="footer-title">Regional Office</h3>
+
+            <ul class="footer-office">
+                <li><i class="fas fa-map-marker-alt"></i> Financial District, Hyderabad, 500032</li>
+                <li><i class="fas fa-phone-alt"></i> +919397098090</li>
+                <li><i class="fas fa-envelope"></i> charymosquitonets@gmail.com</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+        <p>© 2025 CharyMosquitoNets. All Rights Reserved.</p>
+        <p>Built by Tarun Kotagiri</p>
+    </div>
+
+</footer>
+
+
+
+</body>
+</html>
