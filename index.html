@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Chary Mosquito Nets</title>
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Page Title (Browser Tab + SEO) -->
+    <title>Chary – Aluminium Mesh Doors & Mesh Works</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="Chary Mosquito Nets – Hyderabad’s No.1 provider of mosquito nets for doors, windows, balconies & aluminium mesh. Free inspection & installation." />
+    <meta name="keywords" content="mosquito nets Hyderabad, mosquito net for doors, mosquito net for windows, aluminium mesh doors, chary mosquito nets" />
+    <meta name="author" content="Chary Mosquito Nets" />
+
+    <!-- Favicon (Browser Tab Icon) -->
+    <link rel="icon" type="image/png" href="Assets/Chary_favicon.png" />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 
 <body>
 
@@ -44,7 +58,7 @@
     <!-- DESKTOP NAV -->
     <nav class="navbar">
         <a href="#">Home</a>
-        <a href="#">Services</a>
+        <a href="product.html">Products</a>
         <a href="#">Contact Us</a>
     </nav>
 
@@ -127,24 +141,60 @@ closeBtn.onclick = overlay.onclick = () => {
         <h3>Request a Quote</h3>
 
         <div class="form-row">
-            <input type="text" placeholder="Name*" />
-            <input type="text" placeholder="Phone*" />
-            <input type="text" placeholder="Location*" />
+            <input type="text" id="name" placeholder="Name*" />
+            <input type="text" id="phone" placeholder="Phone*" />
+            <input type="text" id="location" placeholder="Location*" />
 
-           <select class="service-select">
-    <option selected>Select Service</option>
-    <option>Mosquito Net for Doors</option>
-    <option>Mosquito Net for Windows</option>
-    <option>Mosquito Net for Balcony</option>
-    <option>Repair</option>
-    <option>Mesh Change</option>
-</select>
+            <select class="service-select" id="service">
+                <option value="" selected>Select Service</option>
+                <option>Mosquito Net for Doors</option>
+                <option>Mosquito Net for Windows</option>
+                <option>Mosquito Net for Balcony</option>
+                <option>Repair</option>
+                <option>Mesh Change</option>
+            </select>
 
-
-            <button class="submit-btn">Submit Now →</button>
+            <button class="submit-btn" type="button" onclick="sendToWhatsApp()">
+                Submit Now →
+            </button>
         </div>
     </div>
 </section>
+
+<script>
+function sendToWhatsApp() {
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const location = document.getElementById("location").value.trim();
+    const service = document.getElementById("service").value;
+
+    if (!name || !phone || !location || !service) {
+        alert("Please fill all the fields");
+        return;
+    }
+
+    const whatsappNumber = "6305747441";
+
+    const message = 
+`Welcome to Chary Mosquito Nets 👋
+
+📌 *New Quote Request*
+
+👤 Name: ${name}
+📞 Phone: ${phone}
+📍 Location: ${location}
+🛠 Service: ${service}
+
+Please contact me regarding this service.`;
+
+    const encodedMessage = encodeURIComponent(message);
+
+    const whatsappURL = `https://wa.me/91${whatsappNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, "_blank");
+}
+</script>
+
 
 <!-- ===========================
  ABOUT SECTION
@@ -277,7 +327,14 @@ function showSlide(n) {
 
     <div class="cta-content">
         <h2>Get ready for a Mosquito Free House.</h2>
-        <a href="#" class="cta-btn-yellow">Get In Touch →</a>
+
+        <a 
+          href="https://wa.me/917032611447?text=Welcome%20to%20Chary%20Mosquito%20Nets!%20How%20can%20I%20help%20you%20with%20our%20services%3F%0A%0AAvailable%20Services%3A%0A-%20Mosquito%20Net%20for%20Doors%0A-%20Mosquito%20Net%20for%20Windows%0A-%20Mosquito%20Net%20for%20Balcony%0A-%20Repair%0A-%20Mesh%20Change"
+          target="_blank"
+          class="cta-btn-yellow"
+        >
+            Get In Touch →
+        </a>
     </div>
 </section>
 
@@ -367,7 +424,7 @@ img.addEventListener("mouseleave", () => {
 
         <div class="process-item">
             <div class="process-card">
-                <img src="Assets/c1.png" alt="">
+                <img src="Assets/call.svg" alt="Call">
             </div>
             <h3>Schedule a Call</h3>
             <p>
@@ -378,7 +435,7 @@ img.addEventListener("mouseleave", () => {
 
         <div class="process-item">
             <div class="process-card">
-                <img src="Assets/calculator.svg" alt="">
+                <img src="Assets/calculator.svg" alt="Estimation">
             </div>
             <h3>Get Estimation</h3>
             <p>
@@ -389,7 +446,7 @@ img.addEventListener("mouseleave", () => {
 
         <div class="process-item">
             <div class="process-card">
-                <img src="Assets/s1.jpg" alt="">
+                <img src="Assets/smile.svg" alt="Install">
             </div>
             <h3>Install Insect Screen</h3>
             <p>
@@ -425,11 +482,16 @@ document.querySelectorAll('.process-card').forEach(card => {
     <h2>Let’s Get<br>Together</h2>
     <p>Take Our Services</p>
 
-    <a href="#" class="together-btn">
-      Ping us on Whatsapp →
+    <a 
+      href="https://wa.me/917032611447?text=Welcome%20to%20Chary%20Mosquito%20Nets!%0A%0AOur%20Services:%0A-%20Mosquito%20Net%20for%20Doors%0A-%20Mosquito%20Net%20for%20Windows%0A-%20Mosquito%20Net%20for%20Balcony%0A-%20Repair%0A-%20Mesh%20Change%0A%0AHello,%20Need%20Mosquito%20Nets,%20please%20get%20back%20on%20this%20number!"
+      target="_blank"
+      class="together-btn"
+    >
+      Ping us on WhatsApp →
     </a>
   </div>
 </section>
+
 
 
 
@@ -441,17 +503,24 @@ document.querySelectorAll('.process-card').forEach(card => {
 
     <div class="contact-actions">
 
-    <a href="#" class="whatsapp-btn">
+    <!-- WhatsApp Chat -->
+    <a 
+        href="https://wa.me/919397098090?text=Welcome%20to%20Chary%20Mosquito%20Nets!%20How%20can%20we%20help%20you%20with%20our%20services?"
+        target="_blank"
+        class="whatsapp-btn"
+    >
         <img src="Assets/whatsapp.png" alt="">
         Chat on WhatsApp
     </a>
 
-    <div class="phone-box">
+    <!-- Call Button -->
+    <a href="tel:+919397098090" class="phone-box">
         <img src="Assets/phone.png" class="phone-icon">
         <p class="phone-number">9397098090</p>
-    </div>
+    </a>
 
 </div>
+
 
 
     <!-- Right Side Google Map -->

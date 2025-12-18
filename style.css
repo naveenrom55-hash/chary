@@ -51,61 +51,61 @@ body {
 }
 
 /* =========================
- HEADER (BIG PREMIUM)
+ HEADER (COMPACT & CLEAN)
 ========================= */
 .header {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 100px;   /* ⬅ BIG HEADER */
+    padding: 6px 70px;          /* ⬅ reduced from 10px to 6px */
     background: #fff;
-}
-
-/* =========================
- STICKY HEADER (NO SIZE CHANGE)
-========================= */
-.header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* lighter shadow */
 }
 
 
-/* LOGO BIG */
+/* LOGO (KEEP SAME SIZE AS BEFORE) */
 .logo {
-    width: 200px;
+    width: 200px;               /* ✅ SAME LOGO SIZE */
 }
 
 /* NAV LINKS */
 .navbar a {
-    margin: 0 30px;
+    margin: 0 24px;
     text-decoration: none;
     color: #000;
-    font-size: 19px;
+    font-size: 17px;            /* slightly smaller for balance */
     font-weight: 600;
+    transition: color 0.25s ease;
+}
+
+.navbar a:hover {
+    color: #1e63ff;
 }
 
 /* CONTACT BOX */
 .contact-box {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 14px;
 }
 
 .contact-box i {
-    font-size: 42px;       /* ⬅ bigger icon */
+    font-size: 34px;            /* reduced from 42px */
     color: #1e63ff;
 }
 
 .quick {
-    font-size: 14px;
+    font-size: 13px;
     color: #555;
     font-weight: 500;
 }
 
 .number {
-    font-size: 22px;
+    font-size: 18px;            /* reduced */
     font-weight: 700;
     color: #000;
 }
@@ -115,7 +115,7 @@ body {
 ========================= */
 .hamburger {
     display: none;
-    font-size: 32px;       /* ⬅ bigger */
+    font-size: 28px;
     cursor: pointer;
 }
 
@@ -125,7 +125,7 @@ body {
 .menu-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.6);
     opacity: 0;
     pointer-events: none;
     transition: 0.3s ease;
@@ -140,13 +140,13 @@ body {
 .mobile-menu {
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 300px;
+    right: -280px;
+    width: 280px;
     height: 100%;
     background: #0d2a8a;
     display: flex;
     flex-direction: column;
-    padding: 40px 30px;
+    padding: 36px 26px;
     transition: 0.4s ease;
     z-index: 99;
 }
@@ -158,8 +158,8 @@ body {
 .mobile-menu a {
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
-    margin: 22px 0;
+    font-size: 18px;
+    margin: 18px 0;
     font-weight: 500;
 }
 
@@ -168,7 +168,7 @@ body {
     font-size: 26px;
     align-self: flex-end;
     cursor: pointer;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 /* =========================
@@ -176,7 +176,6 @@ body {
 ========================= */
 @media (max-width: 992px) {
 
-    /* hide desktop items */
     .navbar,
     .contact-box {
         display: none;
@@ -184,27 +183,18 @@ body {
 
     .hamburger {
         display: block;
+        color: #000;
     }
 
-    /* header mobile */
     .header {
-        padding: 26px 26px;
+        padding: 16px 24px;     /* compact mobile header */
     }
 
     .logo {
-        width: 165px;
-    }
-
-    /* top strip */
-    .top-strip {
-        padding: 10px 20px;
-        font-size: 13px;
-    }
-
-    .strip-text {
-        display: none;
+        width: 165px;           /* mobile-friendly */
     }
 }
+
 
 
 /* =========================
